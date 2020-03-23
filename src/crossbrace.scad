@@ -15,6 +15,6 @@ module crossbrace(width, height, diameter, flattening=1) {
             translate([0, -off, 0]) rotate([-angle, 0, 0]) pill(s_height, diameter);
         }
         // size increase to account for pill caps
-        translate([0, -width / 2 - diameter / 2, - diameter / 2]) cube([diameter/2, width + diameter, height + diameter]);
+        translate([0, -width / 2 - diameter / 2, - diameter / 2]) cube([diameter * flattening, width + diameter, height + diameter]);
     }
 }
