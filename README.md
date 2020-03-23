@@ -22,3 +22,9 @@ Overview
 
 Generate a rounded crossbrace that's cut in half, for strengthening parts without using too much
 material.
+
+### torus
+
+![torus example](doc/img/torus.png)
+
+Generate a torus or a torus pipe (a torus with a straight middle section).
