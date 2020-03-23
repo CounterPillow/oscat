@@ -26,3 +26,21 @@ module snek(path) {
         }
     }
 }
+
+module snekpipe(wall_thickness, path) {
+    difference() {
+        snek(path);
+        for(s = path) {
+            assert(s[3] >= 2 * wall_thickness,
+                    str("Segment ", s, " cannot satisfy wall thickness requirements"));
+        }
+        let(interior = [ for (in_s = path) [in_s[0], in_s[1], in_s[2],
+                                            in_s[3] - 2 * wall_thickness]])
+        snek(interior);
+        // Punch through the start and end with some spheres
+        let(fs = path[0])
+        translate([fs[0], fs[1], fs[2]]) sphere(d=fs[3] - 2 * wall_thickness);
+        let(ls = path[len(path) - 1])
+        translate([ls[0], ls[1], ls[2]]) sphere(d=ls[3] - 2 * wall_thickness);
+    }
+}

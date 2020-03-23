@@ -39,3 +39,5 @@ Various utility math functions.
 
 Generate cylinders of varying dimensions along a path. Uses spheres to join them so needs decently
 high `$fn` number to not look like complete doodoo.
+
+Can also generate a `snekpipe`, which is like a `snek` but as a hollow pipe.
