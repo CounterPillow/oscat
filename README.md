@@ -18,7 +18,7 @@ Overview
 
 ### crossbrace
 
-![crossbrace example](doc/crossbrace.png)
+![crossbrace example](doc/img/crossbrace.png)
 
 Generate a rounded crossbrace that's cut in half, for strengthening parts without using too much
 material.

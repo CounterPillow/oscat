@@ -1,7 +1,7 @@
 crossbrace
 ==========
 
-![crossbrace example](crossbrace.png)
+![crossbrace example](img/crossbrace.png)
 
 Generate a rounded crossbrace that's cut in half, for strengthening parts without using too much
 material.
