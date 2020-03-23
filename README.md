@@ -28,3 +28,14 @@ material.
 ![torus example](doc/img/torus.png)
 
 Generate a torus or a torus pipe (a torus with a straight middle section).
+
+### quickmaffs
+
+Various utility math functions.
+
+### snek
+
+![snek example](doc/img/snek.png)
+
+Generate cylinders of varying dimensions along a path. Uses spheres to join them so needs decently
+high `$fn` number to not look like complete doodoo.
