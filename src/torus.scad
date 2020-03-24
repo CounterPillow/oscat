@@ -30,3 +30,15 @@ module toruspipe(inner_diameter, outer_diameter, height=1, center=false) {
                 torus(inner_diameter, outer_diameter, center=true);
         }
 }
+
+module chainlink(length, width, diameter) {
+    outer_diam = width + 2 * diameter;
+    union() {
+        translate([0, -length / 2 + width / 2, 0]) torus(width, outer_diam, true, -180);
+        translate([0, length / 2 - width / 2, 0]) torus(width, outer_diam, true, 180);
+        rotate([90, 0, 0]) translate([0, 0, -length / 2 + width / 2]) {
+            translate([-width / 2 - diameter/2, 0, 0]) cylinder(h=length - width, d=diameter);
+            translate([width / 2 + diameter/2, 0, 0]) cylinder(h=length - width, d=diameter);
+        }
+    }
+}
