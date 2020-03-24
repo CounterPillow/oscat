@@ -1,11 +1,11 @@
-module torus(inner_diameter, outer_diameter, center=false) {
+module torus(inner_diameter, outer_diameter, center=false, angle=360) {
     assert(outer_diameter - inner_diameter > 0,
         "outer_diameter cannot be smaller or equal to inner_diameter");
     tube_diam = (outer_diameter - inner_diameter) / 2;
     off = center ? 0 : inner_diameter / 2 + tube_diam;
     off_z = center ? 0 : tube_diam / 2;
     translate([off, off, off_z])
-        rotate_extrude(angle=360, convexity=4)
+        rotate_extrude(angle=angle, convexity=4)
         translate([inner_diameter / 2 + tube_diam / 2, 0, 0])
         circle(d=tube_diam);
 }
